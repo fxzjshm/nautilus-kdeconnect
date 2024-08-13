@@ -38,7 +38,7 @@ class KDEConnectExtension(GObject.GObject, Nautilus.MenuProvider):
 
         send_files(files, device_id, device_name)
 
-    def get_file_items(self, window, files):
+    def get_file_items(self, files):
         try:
             devices = get_available_devices()
         except Exception as e:
