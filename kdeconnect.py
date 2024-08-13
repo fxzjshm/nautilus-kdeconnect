@@ -8,7 +8,6 @@ def send_files(files, device_id, device_name):
 def get_available_devices():
     devices_a=[]
     devices = check_output(["kdeconnect-cli", "-a"]).decode("utf-8").strip().split("\n")
-    devices.pop()
     print(devices)
     for device in devices:
         device_name=re.search("(?<=-\s).+(?=:\s)", device).group(0)
